@@ -1,0 +1,69 @@
+ PImage portadacontitulo;
+ PImage portadasintitulo;
+ PImage portadaoscuro;
+ PImage nena;
+ PImage nenessinfondo;
+ PImage luz;
+ PImage plantas;
+ PImage fuego;
+ PImage edificio;
+ PImage farol;
+ 
+ PFont titulo;
+ PFont titulo2;
+ int T2=1;
+ int T=450;
+ float prueba;
+ 
+ void setup(){
+   size(600,400);
+   portadacontitulo= loadImage("portada con titulo.jpeg");
+   portadasintitulo= loadImage("portada sin titulo.jpeg");
+   portadaoscuro= loadImage("portada oscuro.jpeg");
+   nena= loadImage("nena 1.jpeg");
+   nenessinfondo= loadImage("nenes sin fondo.jpeg");
+   luz= loadImage("luz 2.jpeg");
+   plantas=loadImage("plantas.jpeg");
+   fuego=loadImage("fuego.jpeg");
+   edificio=loadImage("edificio.jpeg");
+   farol=loadImage("farol 1.jpeg");
+   titulo=loadFont("Harrington-48.vlw");
+   titulo2=loadFont("ArialNarrow-48.vlw");
+   
+ }
+ 
+ 
+ 
+ void draw(){
+   
+   image(portadacontitulo,0,0,300,400);
+   image(portadasintitulo,300,0,300,400);
+   
+   
+ textFont(titulo,40);  
+ T=T-1;
+ fill(#3E0C01);
+ text("Un misterio\nen Tucumán",358,T);
+ 
+ if(T<148){
+   T=T+1;
+ }//esto último es para poder mover el texto y que se detenga dónde quiero!
+ 
+ T2=T2+1;
+ textFont(titulo2,10);
+ text("LILIANA CINETTO",T2,114);
+ if(T2>414){
+   T2=T2-1;
+ }
+ 
+ 
+ prueba=map(mouseX,360,420,40,80);
+ 
+ if(prueba==mouseX){
+   image(edificio,354,42,160,50);
+ }
+ 
+ fill(255);
+ text("("+mouseX+";"+mouseY+")",0,379);
+ 
+ }
