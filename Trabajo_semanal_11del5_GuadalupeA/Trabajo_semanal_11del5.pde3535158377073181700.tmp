@@ -1,0 +1,298 @@
+PFont fuente;
+PImage odin1, odin2, odin3, odin4, odin5, odin6, odin7, odin8, odin9, odin10, odin11, odin12, odin13;
+int text1;
+int text2;
+int text3;
+int text4;
+int text5;
+int text6;
+int text7;
+int text8;
+int text9;
+int text10;
+int text11;
+int text12;
+int text13;
+int X1;
+int X2;
+int X3;
+int X4;
+int X5;
+int X6;
+int X7;
+int X8;
+int X9;
+int X10;
+int X11;
+int X12;
+int X13;
+int T3;
+int T4;
+int T5;
+int T6;
+int T7;
+int T8;
+int T9;
+int T10;
+int T11;
+int T12;
+int T13;
+
+int I;
+int Click;
+int framespseg;
+
+
+float pasar2;
+float pasar1;
+
+
+void setup(){
+  size(400,300);
+  fuente=loadFont("ARBONNIE-48.vlw");
+  odin1= loadImage("odin1.png");
+  odin2= loadImage("odin2.png");
+  odin3= loadImage("odin3.png");
+  odin4= loadImage("odin4.png");
+  odin5= loadImage("odin5.png");
+  odin6= loadImage("odin6.png");
+  odin7= loadImage("odin7.png");
+  odin8= loadImage("odin8.png");
+  odin9= loadImage("odin9.png");
+  odin10= loadImage("odin10.png");
+  odin11= loadImage("odin11.png");
+  odin12= loadImage("odin12.png");
+  odin13= loadImage("odin13.png");
+  X1=0;
+  X2=401;
+  text1=0;
+  text2=0;
+  text4=0;
+  text5=300;
+  text6=300;
+ 
+  I=0;
+}
+
+
+void draw(){
+  background(255);
+  
+  
+  pasar2= dist(350,250,mouseX,mouseY);
+  pasar1= dist(50,250,mouseX,mouseY);
+  
+  framespseg= framespseg+1;
+  
+  if(framespseg==60){
+    framespseg=0;
+  }
+  
+  
+  //primer imagen
+  /*image(odin1,0,0,400,300);
+    fill(255);
+  textFont(fuente, 25);
+  
+  
+  text("Odín es el dios\nPadre de todos en\nla mitología Nórdica",200,text1);
+  text1=text1+2;
+  if(text1>=29){
+    text1=text1-2;
+  }
+  //segunda imagen
+  pasar2= dist(350,250,mouseX,mouseY);
+  
+  stroke(255);
+  
+    if (pasar2<=50 && (mousePressed)){
+  fill(100,200,200); 
+    X1=2;
+    }else{
+      noFill();}
+  
+if(X1==2){
+  image(odin2,0,0,400,300);
+     X2=2;
+     fill(0);
+     text("Odin es el rey de Asgard",150,text2);
+    }
+if(X2==2){
+       text2=text2+2;
+}
+if(text2>=29){
+   X3=2;
+  text2=text2-2;}
+  
+  
+  pasar1= dist(50,250,mouseX,mouseY);
+ 
+  if (pasar1<=50 && (mousePressed)){
+}
+  
+  //tercera imagen
+if(pasar2<=50 && (mousePressed) && (X3==2)) {
+  X4=2; 
+}else{
+      noFill();}
+      
+if(X4==2){
+
+  T3=2;
+  fill(0);
+  textSize(30);
+  image(odin3,0,0,400,300);
+  text("Cena en el Valhalla\ncon los caidos en batalla",text3,260);
+}
+
+if(T3==2){
+  noFill();
+  text3=text3+4;
+}
+
+if(text3>=150){
+    X5=2;
+  text3=text3-4;}
+  
+  //cuarta imagen
+  
+  if(pasar2<=50 && (mousePressed) && (X5==2)) {
+    X6=2; 
+}else{
+      noFill();}
+if(X6==2){
+  T4=2;
+  textSize(25);
+  image(odin4,0,0,400,300);
+  text("Tiene un corcel llamado Sleipnir\nque tiene 8 patas",text4,260);
+}
+
+if(T4==2){
+  noFill();
+  text4=text4+4;
+}
+
+if(text4>=115){
+   X7=2;
+  text4=text4-4;}
+
+ //quinta imagen 
+ 
+  if(pasar2<=50 && (mousePressed) && (X7==2)) {
+    X8=2; 
+}else{
+      noFill();}
+if(X8==2){
+  T5=2;
+  textSize(25);
+  fill(255);
+  image(odin5,0,0,400,300);
+  text("Sale a cazar con otros dioses",90,text5);
+}
+
+if(T5==2){
+  noFill();
+  text5=text5-4;
+}
+
+if(text5<=260){
+  X9=2;
+  text5=text5+4;}  
+  
+  //sexta imagen
+  
+  if(pasar2<=50 && (mousePressed) && (X9==2)) {
+    X10=2; 
+}else{
+      noFill();}
+if(X10==2){
+  T6=2;
+  textSize(25);
+  fill(0);
+  image(odin6,0,0,400,300);
+  text("Luchó contra Ymir",230,text6);
+}
+
+if(T6==2){
+  noFill();
+  text6=text6-4;
+}
+
+if(text6<=260){
+  X11=2;
+  text6=text6+4;}  
+  
+  //septima imagen
+  
+  if(pasar2<=50 && (mousePressed) && (11==2)){
+  X12=2;
+}else{
+  noFill();}
+      
+if(X12==2){
+  T7=2;
+  textSize(25);
+  fill(0);
+  image(odin7,0,0,400,300);
+  text("Luchó contra Ymir",230,text7);
+}
+
+if(T7==2){
+  noFill();
+  text7=text7-4;
+}
+
+if(text7<=260){
+  X11=2;
+  text7=text7+4;} */
+       
+if(I==0){
+  image(odin1,0,0,400,300);
+  
+}
+  
+if(I==1){
+  image(odin2,0,0,400,300);
+}  
+
+if(I==2){
+  image(odin3,0,0,400,300);
+}
+
+if(Click==1){
+ I=I+1; 
+ Click=0;
+}
+
+if(Click==-1){
+  I=I-1;
+  Click=0;
+}else{I=1;}
+
+if(framespseg>=5){
+  Click=1;
+  framespseg=0;
+}
+  
+if(framespseg<=1){
+  Click=-1;
+  framespseg=0;
+}
+
+if(pasar1<=50 && (mousePressed)){
+  framespseg= framespseg-1;
+}
+
+if(pasar2<=50 && (mousePressed)){
+  
+}
+
+noFill();
+  stroke(0);
+  ellipse(350,250, 50,50);
+ellipse(50,250,50,50);
+  
+  println(I);
+ 
+  
+}
